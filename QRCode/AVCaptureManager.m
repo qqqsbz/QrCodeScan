@@ -2,7 +2,7 @@
 //  AVCaptureManager.m
 //  iPenYou
 //
-//  Created by trgoofi on 14-5-4.
+//  Created by coder on 14-5-4.
 //  Copyright (c) 2014年 vbuy. All rights reserved.
 //
 
