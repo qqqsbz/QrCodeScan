@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qFc-wX-wq6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ahP-FO-9NY">
+            <objects>
+                <navigationController id="qFc-wX-wq6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hQY-3e-e7N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eYv-QP-TIR" kind="relationship" relationship="rootViewController" id="qoj-LX-2C7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9oz-xu-LiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-557" y="311"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ch3-Zk-EpF">
+            <objects>
+                <viewController id="eYv-QP-TIR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FKY-uR-wsB"/>
+                        <viewControllerLayoutGuide type="bottom" id="tsS-Sc-TSe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5ck-Mb-wFL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2f-ih-fb3">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="二维码"/>
+                                <connections>
+                                    <segue destination="5CM-Y8-s2P" kind="push" id="Lno-lB-6xM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Zl-xP-b7v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLF-Lm-oEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118" y="311"/>
+        </scene>
+        <!--二维码-->
+        <scene sceneID="Mqb-Pp-crM">
+            <objects>
+                <viewController id="5CM-Y8-s2P" customClass="QRCodeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZAi-rk-SxV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hjf-Dd-lJA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lIC-st-7X2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qmj-Ck-X1g" userLabel="maskView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_window.png" translatesAutoresizingMaskIntoConstraints="NO" id="lkK-jv-kEE" userLabel="Qrcode Window">
+                                <rect key="frame" x="50" y="174" width="221" height="221"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcw-s8-mcv" userLabel="scan Indicator">
+                                <rect key="frame" x="50" y="174" width="221" height="2"/>
+                                <color key="backgroundColor" red="0.17647058823529413" green="0.70980392156862748" blue="0.050980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="PlF-Ni-iRY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lkK-jv-kEE" firstAttribute="centerX" secondItem="lIC-st-7X2" secondAttribute="centerX" id="2nZ-8d-B4n"/>
+                            <constraint firstItem="hcw-s8-mcv" firstAttribute="leading" secondItem="lkK-jv-kEE" secondAttribute="leading" id="AXR-Mf-ACE"/>
+                            <constraint firstItem="lkK-jv-kEE" firstAttribute="centerY" secondItem="lIC-st-7X2" secondAttribute="centerY" id="EVG-XI-KYR"/>
+                            <constraint firstItem="hcw-s8-mcv" firstAttribute="width" secondItem="lkK-jv-kEE" secondAttribute="width" id="IQ8-5d-WmI"/>
+                            <constraint firstAttribute="trailing" secondItem="Qmj-Ck-X1g" secondAttribute="trailing" id="YGS-LW-Y0i"/>
+                            <constraint firstItem="Hjf-Dd-lJA" firstAttribute="top" secondItem="Qmj-Ck-X1g" secondAttribute="bottom" id="Z18-QY-DFS"/>
+                            <constraint firstItem="Qmj-Ck-X1g" firstAttribute="leading" secondItem="lIC-st-7X2" secondAttribute="leading" id="eV6-mk-rqR"/>
+                            <constraint firstItem="ZAi-rk-SxV" firstAttribute="bottom" secondItem="Qmj-Ck-X1g" secondAttribute="top" constant="64" id="zJf-W1-Bo1"/>
+                            <constraint firstItem="hcw-s8-mcv" firstAttribute="top" secondItem="lkK-jv-kEE" secondAttribute="top" id="zs9-95-lLw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码" id="XNG-Kg-BaV">
+                        <barButtonItem key="rightBarButtonItem" image="flashligth.png" id="INo-9f-VCC">
+                            <connections>
+                                <action selector="toggleFlashlight:" destination="5CM-Y8-s2P" id="Ilj-vl-V66"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="maskView" destination="Qmj-Ck-X1g" id="b4z-w6-WKB"/>
+                        <outlet property="qrcodeWindow" destination="lkK-jv-kEE" id="hWm-mb-Pjt"/>
+                        <outlet property="scanIndicator" destination="hcw-s8-mcv" id="YXZ-wA-Qs1"/>
+                        <outlet property="scanIndicatorTopConstraint" destination="zs9-95-lLw" id="IkU-42-MJQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h3V-hb-m4w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="342" y="311"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="flashligth.png" width="22" height="22"/>
+        <image name="qrcode_window.png" width="221" height="221"/>
+    </resources>
+</document>
